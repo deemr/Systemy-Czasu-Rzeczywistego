@@ -1,0 +1,6 @@
+C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczak.exe.config
+C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczak.exe
+C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczak.pdb
+C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczak.exe
+C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczak.pdb
+C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.exe.config
