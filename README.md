@@ -1,6 +1,6 @@
-# H1 Projektowanie Systemów Czasu Rzeczywistego
+# Projektowanie Systemów Czasu Rzeczywistego
 
-## H2 Rok akademicki 2015/2016
+## Rok akademicki 2015/2016
 
 Automatyka i Robotyka
 Wydział Informatyki
