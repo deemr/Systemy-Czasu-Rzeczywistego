@@ -4,3 +4,9 @@ C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplicati
 C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczak.exe
 C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczak.pdb
 C:\Users\ksis\Documents\Visual Studio 2015\Projects\PSCR 106426\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.exe.config
+C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.exe.config
+C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.exe
+C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.pdb
+C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczaks.exe
+C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczaks.pdb

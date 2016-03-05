@@ -70,7 +70,8 @@ namespace ConsoleApplication1
             Interface1 agent = new AgentKonkretny(0);
             Interface1 agent1 = new AgentKonkretny(1);
 
-            
+            agent.Run();
+            agent1.Run();
 
             Console.ReadLine();
         }
