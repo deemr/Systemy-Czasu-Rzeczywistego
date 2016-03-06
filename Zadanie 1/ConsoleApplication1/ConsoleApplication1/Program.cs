@@ -12,8 +12,8 @@ namespace ConsoleApplication1
     class Program{
         static void Main(string[] args){
 
-            IRunnable agent = new AgentKonkretny(0);
-            IRunnable agent1 = new AgentKonkretny(1);
+            IRunnable agent = new AgentConstantCounting(0);
+            IRunnable agent1 = new AgentConstantCounting(1);
 
             Console.ReadLine();
         }

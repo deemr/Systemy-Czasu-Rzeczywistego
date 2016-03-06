@@ -59,7 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agent.cs" />
-    <Compile Include="AgentKonkretny.cs" />
+    <Compile Include="AgentConstantCounting.cs" />
+    <Compile Include="AgentCounting.cs" />
+    <Compile Include="AgentSine.cs" />
+    <Compile Include="HelpClass.cs" />
     <Compile Include="IRunnable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    abstract class Agent : IRunnable
+    public abstract class Agent : IRunnable
     {
+
+        public int agentId;
+        public int Licznik;
+        private float numerator;
+
         public abstract bool HasFinished {
             get;
             set;
@@ -22,7 +27,12 @@ namespace ConsoleApplication1
             }
         }
 
-        public abstract IEnumerator<float> CoroutineUpdate();
+        public IEnumerator<float> CoroutineUpdate() {
+            while (!HasFinished) {
+                this.Update();
+                yield return numerator;
+            }   yield break;
+        }
 
     }
 }
