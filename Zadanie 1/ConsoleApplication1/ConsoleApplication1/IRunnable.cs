@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    interface Interface1
+    interface IRunnable
     {
 
          void Run();
-         System.Collections.IEnumerator CoroutineUpdate();        
+         IEnumerator<float> CoroutineUpdate();        
 
     }
 
