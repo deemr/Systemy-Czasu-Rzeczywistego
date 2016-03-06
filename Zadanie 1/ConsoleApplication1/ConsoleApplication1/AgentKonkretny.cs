@@ -12,28 +12,33 @@ namespace ConsoleApplication1
         private int agentId;
         private int Licznik;
 
+        public override bool HasFinished
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public override void Update()
         {
-
-
             Console.WriteLine("Agent o id: " + agentId + ", wartosc licznika: " + Licznik);
             Licznik++;
             this.HasFinished = true;
-
-
         }
-
         public override IEnumerator<float> CoroutineUpdate()
         {
             throw new NotImplementedException();
         }
-
         public AgentKonkretny(int agentId)
         {
             Licznik = 0;
             this.agentId = agentId;
-
         }
-
     }
 }

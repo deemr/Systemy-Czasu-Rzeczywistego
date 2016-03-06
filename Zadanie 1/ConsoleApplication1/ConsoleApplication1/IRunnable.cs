@@ -9,10 +9,13 @@ namespace ConsoleApplication1
 {
     interface IRunnable
     {
-
-         void Run();
-         IEnumerator<float> CoroutineUpdate();        
-
+        void Run();
+        IEnumerator<float> CoroutineUpdate();
+        bool HasFinished
+        {
+            get;
+            set;
+        }
     }
 
 }
