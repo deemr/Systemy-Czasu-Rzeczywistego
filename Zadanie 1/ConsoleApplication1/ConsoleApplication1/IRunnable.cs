@@ -11,8 +11,7 @@ namespace ConsoleApplication1
     {
         void Run();
         IEnumerator<float> CoroutineUpdate();
-        bool HasFinished
-        {
+        bool HasFinished{
             get;
             set;
         }

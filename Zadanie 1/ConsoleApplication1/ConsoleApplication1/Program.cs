@@ -9,10 +9,8 @@ using System.Threading;
 namespace ConsoleApplication1
 {
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
+    class Program{
+        static void Main(string[] args){
 
             IRunnable agent = new AgentKonkretny(0);
             IRunnable agent1 = new AgentKonkretny(1);

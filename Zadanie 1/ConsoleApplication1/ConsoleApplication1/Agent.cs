@@ -9,13 +9,14 @@ namespace ConsoleApplication1
 {
     abstract class Agent : IRunnable
     {
-        public abstract bool HasFinished { get; set; }
+        public abstract bool HasFinished {
+            get;
+            set;
+        }
         abstract public void Update();
 
-        void IRunnable.Run()
-        {
-            while (!HasFinished)
-            {
+        void IRunnable.Run(){
+            while (!HasFinished){
                 Thread.Sleep(100);
                 this.Update();
             }
