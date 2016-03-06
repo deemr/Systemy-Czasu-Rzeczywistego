@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApplication1
 {
     class AgentSine : Agent{
-        public override bool HasFinished
-        {
-            set;
-            get;
-        }
+        
         private double sineValue;
         private double Output {
 
@@ -21,7 +17,7 @@ namespace ConsoleApplication1
             set { //set działa jak argument metody
                 sineValue = value;
             }
-
+            dsfs
         }
         public override void Update()
         {

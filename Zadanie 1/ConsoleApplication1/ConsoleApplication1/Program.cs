@@ -14,8 +14,7 @@ namespace ConsoleApplication1
         {
 
             List<Agent> AgentsList = new List<Agent>();
-            for (int i = 0; i < 10; i++)
-            {
+            for (int i = 0; i < 10; i++){
 
                 AgentsList.Add(new AgentConstantCounting(i));
                 AgentsList.Add(new AgentCounting(i));
@@ -42,7 +41,9 @@ namespace ConsoleApplication1
 
         static void Main(string[] args){
 
-            List<Agent> List = new List<Agent>(GenerateRunnables());
+            List<Agent> List = new List<Agent>();
+
+            List = GenerateRunnables();
 
             RunThreads(List);
             

@@ -14,7 +14,7 @@ namespace ConsoleApplication1
         public int Licznik;
         private float numerator;
 
-        public abstract bool HasFinished {
+        public bool HasFinished {
             get;
             set;
         }

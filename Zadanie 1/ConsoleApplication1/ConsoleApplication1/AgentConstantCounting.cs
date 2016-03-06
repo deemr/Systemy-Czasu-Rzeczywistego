@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApplication1
 {
     class AgentConstantCounting : Agent{ 
-        public override bool HasFinished{
-            set;
-            get;
-        }
+        
         public override void Update(){
             if (Licznik < 10) Licznik++;
             else {
