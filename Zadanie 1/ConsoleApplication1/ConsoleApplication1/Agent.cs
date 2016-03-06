@@ -12,7 +12,7 @@ namespace ConsoleApplication1
 
         public int agentId;
         public int Licznik;
-        private float numerator;
+        
 
         public bool HasFinished {
             get;
@@ -28,6 +28,7 @@ namespace ConsoleApplication1
         }
 
         public IEnumerator<float> CoroutineUpdate() {
+            float numerator = 0 ;
             while (!HasFinished) {
                 this.Update();
                 yield return numerator;

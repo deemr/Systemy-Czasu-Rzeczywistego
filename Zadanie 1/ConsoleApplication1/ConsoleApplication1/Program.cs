@@ -35,7 +35,7 @@ namespace ConsoleApplication1
                 a++;
             }
             foreach (Thread thread in threadList) {
-                thread.Join();
+                thread.Join();//blokuje wątek zanim zostanie zakończony
             }
         }
 

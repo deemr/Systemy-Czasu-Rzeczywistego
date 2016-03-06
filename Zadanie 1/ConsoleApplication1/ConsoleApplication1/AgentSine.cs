@@ -17,7 +17,7 @@ namespace ConsoleApplication1
             set { //set działa jak argument metody
                 sineValue = value;
             }
-            dsfs
+            
         }
         public override void Update()
         {
