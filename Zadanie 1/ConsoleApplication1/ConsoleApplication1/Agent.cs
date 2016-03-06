@@ -20,7 +20,7 @@ namespace ConsoleApplication1
         }
         abstract public void Update();
 
-        void IRunnable.Run(){
+        public void Run(){
             while (!HasFinished){
                 Thread.Sleep(100);
                 this.Update();

@@ -6,9 +6,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class AgentCounting{
-
-
+    class AgentCounting : Agent{
+        public override bool HasFinished
+        {
+            set;
+            get;
+        }
+        public override void Update()
+        {
+            if (Licznik < agentId) Licznik++;
+            else {
+                Console.WriteLine("Agent Counting o id: " + agentId);
+                this.HasFinished = true;
+            }
+        }
+        public AgentCounting(int agentId)
+        {
+            Licznik = 0;
+            this.agentId = agentId;
+        }
 
     }
 }

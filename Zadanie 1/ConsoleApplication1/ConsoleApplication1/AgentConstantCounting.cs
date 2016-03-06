@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class AgentConstantCounting : Agent
-    { 
+    class AgentConstantCounting : Agent{ 
         public override bool HasFinished{
             set;
             get;
@@ -15,7 +14,7 @@ namespace ConsoleApplication1
         public override void Update(){
             if (Licznik < 10) Licznik++;
             else {
-                Console.WriteLine("Agent o id: " + agentId);
+                Console.WriteLine("Agent ConstantCounting o id: " + agentId);
                 this.HasFinished = true;
             }
         }
