@@ -44,19 +44,17 @@ namespace ConsoleApplication1
 
             var enumerators = AgentsList.Select(ag => ag.CoroutineUpdate());
 
-            foreach (var e in enumerators){
-                e.MoveNext();
-            }
-            Thread.Sleep(100);
+            bool check;
 
-
-            /*IEnumerator list = enumerators.GetEnumerator();
-            while (list.MoveNext())
-            {
-                Console.WriteLine("myEnumerator.Current = " + list.MoveNext());
+            while (check=true) {
+                foreach (var e in enumerators) {
+                    e.MoveNext();
+                    check = true;
+                }
+                Thread.Sleep(100);
             }
-            Thread.Sleep(1000);*/
             
+    
         }
 
         static void Main(string[] args){
