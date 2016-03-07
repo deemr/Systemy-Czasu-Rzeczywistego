@@ -22,7 +22,7 @@ namespace ConsoleApplication1
         
         public override void Update()
         {
-            if (agentId%10 !=0 ){
+            if (Licznik < 10){
                 Licznik++;   
             }
             else {

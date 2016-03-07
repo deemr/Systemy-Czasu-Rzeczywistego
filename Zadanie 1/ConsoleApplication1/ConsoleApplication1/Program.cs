@@ -36,7 +36,7 @@ namespace ConsoleApplication1
             }
             foreach (Thread thread in threadList) {
                 thread.Join();//blokuje wątek zanim zostanie zakończony
-                thread.Abort();
+                
             }
         }
 
@@ -44,12 +44,13 @@ namespace ConsoleApplication1
 
             var enumerators = AgentsList.Select(ag => ag.CoroutineUpdate());
 
-            bool check;
+            bool check=true;
 
-            while (check=true) {
+            while (check) {
+                check = false;
                 foreach (var e in enumerators) {
-                    e.MoveNext();
-                    check = true;
+                    if (e.MoveNext())
+                        check = true;
                 }
                 Thread.Sleep(100);
             }
