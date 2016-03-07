@@ -19,6 +19,7 @@ namespace ConsoleApplication1
             }
             
         }
+        
         public override void Update()
         {
             if (agentId%10 !=0 ){

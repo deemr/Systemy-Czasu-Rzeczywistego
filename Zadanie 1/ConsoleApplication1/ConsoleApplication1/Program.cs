@@ -36,17 +36,37 @@ namespace ConsoleApplication1
             }
             foreach (Thread thread in threadList) {
                 thread.Join();//blokuje wątek zanim zostanie zakończony
+                thread.Abort();
             }
+        }
+
+        public static void RunFibers(IEnumerable<Agent> AgentsList) {
+
+            var enumerators = AgentsList.Select(ag => ag.CoroutineUpdate());
+
+            foreach (var e in enumerators){
+                e.MoveNext();
+            }
+            Thread.Sleep(100);
+
+
+            /*IEnumerator list = enumerators.GetEnumerator();
+            while (list.MoveNext())
+            {
+                Console.WriteLine("myEnumerator.Current = " + list.MoveNext());
+            }
+            Thread.Sleep(1000);*/
+            
         }
 
         static void Main(string[] args){
 
-            List<Agent> List = new List<Agent>();
+            List<Agent> List = new List<Agent>(GenerateRunnables());
 
-            List = GenerateRunnables();
-
+            RunFibers(List); 
+            Console.WriteLine("a teraz ta druga metodka");
             RunThreads(List);
-            
+
             Console.ReadLine();
         }
     }

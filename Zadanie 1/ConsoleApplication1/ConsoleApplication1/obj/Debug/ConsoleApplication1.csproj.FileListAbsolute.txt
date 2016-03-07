@@ -10,3 +10,9 @@ C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zad
 C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczaks.exe
 C:\Users\Mateusz Makowski\Documents\ProjektyPSCR\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczaks.pdb
+C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.exe.config
+C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.exe
+C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\MateuszMakowskiRafalGuzniczaks.pdb
+C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczaks.exe
+C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\MateuszMakowskiRafalGuzniczaks.pdb
