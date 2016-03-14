@@ -12,6 +12,8 @@ namespace ConsoleApplication1
 
         public int agentId;
         public int Licznik;
+        public int Suma;
+        public int Dodawaj;
         
 
         public bool HasFinished {
@@ -22,9 +24,10 @@ namespace ConsoleApplication1
 
         public void Run(){
             while (!HasFinished){
-                Thread.Sleep(100);
+                Thread.Sleep(10);
                 this.Update();
             }
+
         }
 
         public IEnumerator<float> CoroutineUpdate() {
