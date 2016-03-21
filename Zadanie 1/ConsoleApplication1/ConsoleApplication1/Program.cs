@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApplication1
 {
@@ -22,18 +23,38 @@ namespace ConsoleApplication1
 
 
             //}
-            List<int> ListaLiczb = new List<int>(GenerateRandoms());
-            for (int i = 0; i < ListaLiczb.Count; i++)
+            //List<int> ListaLiczb = new List<int>(GenerateRandoms());
+            /*for (int i = 0; i < ListaLiczb.Count; i++)
             {
 
                 if (i == 249) AgentsList.Add(new AgentSum(0, 250));
                 if (i == 499) AgentsList.Add(new AgentSum(1, 250));
                 if (i == 749) AgentsList.Add(new AgentSum(2, 250));
                 if (i == 999) AgentsList.Add(new AgentSum(3, 250));
+               
+            }*/
 
+            string [] Stringi = GenerateText().Split(new Char [] {' ', '.', ',', '\t', '\n' });
+            string kleks = null;
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j< Stringi.Length; j++)
+                {
+                    if (Stringi[j].Trim() != "")
+                    {
+                        Console.WriteLine(Stringi[j]);
+                        kleks += Stringi[j] + " ";
+                    }
+                }
+                //Console.WriteLine(kleks);
+                AgentsList.Add(new AgentText(i + 1,kleks));
+                kleks = null;
             }
-
-            AgentsList.Add(new AgentSumSum(AgentsList.Take(AgentsList.Count).ToList()));
+            
+            
+           
+            //AgentsList.Add(new AgentSumSum(AgentsList.Take(AgentsList.Count).ToList()));
 
 
 
@@ -51,6 +72,11 @@ namespace ConsoleApplication1
             }
 
             return IntList;
+        }
+    
+        private static String GenerateText()
+        {
+            return System.IO.File.ReadAllText(@"C:\Users\ksis\Downloads\Systemy-Czasu-Rzeczywistego-master (1)\Systemy-Czasu-Rzeczywistego-master\Zadanie 1\ConsoleApplication1\tekst.txt");
         }
 
         public static void RunThreads(List<Agent> AgentsList) {
@@ -91,9 +117,9 @@ namespace ConsoleApplication1
 
         static void Main(string[] args){
 
-            List<Agent> List = new List<Agent>(GenerateRunnables());
+            //List<Agent> List = new List<Agent>(GenerateRunnables());
 
-            
+            List<Agent> List = new List<Agent>(GenerateRunnables());
 
             //RunFibers(List); 
             //Console.WriteLine("a teraz ta druga metodka");
@@ -101,11 +127,13 @@ namespace ConsoleApplication1
             
 
             //1000 liczb, w liscie,
-            //robimy agenta, ktory sumuje podliste0
+            //robimy agenta, ktory sumuje podliste
 
 
 
             Console.ReadLine();
         }
+
+        
     }
 }

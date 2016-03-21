@@ -14,6 +14,7 @@ namespace ConsoleApplication1
         public int Licznik;
         public int Suma;
         public int Dodawaj;
+        public string Stringi;
         
 
         public bool HasFinished {

@@ -62,6 +62,7 @@
     <Compile Include="AgentConstantCounting.cs" />
     <Compile Include="AgentCounting.cs" />
     <Compile Include="AgentSine.cs" />
+    <Compile Include="AgentText.cs" />
     <Compile Include="AgentSum.cs" />
     <Compile Include="AgentSumSum.cs" />
     <Compile Include="IRunnable.cs" />
