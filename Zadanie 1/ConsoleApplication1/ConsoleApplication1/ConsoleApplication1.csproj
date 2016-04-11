@@ -59,12 +59,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agent.cs" />
+    <Compile Include="AgentKlient2.cs" />
+    <Compile Include="AgentKlient1.cs" />
     <Compile Include="AgentConstantCounting.cs" />
     <Compile Include="AgentCounting.cs" />
     <Compile Include="AgentSine.cs" />
     <Compile Include="AgentText.cs" />
     <Compile Include="AgentSum.cs" />
     <Compile Include="AgentSumSum.cs" />
+    <Compile Include="AgentBankier.cs" />
     <Compile Include="IRunnable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

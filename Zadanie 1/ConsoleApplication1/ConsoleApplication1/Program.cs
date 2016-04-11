@@ -34,29 +34,30 @@ namespace ConsoleApplication1
                
             }*/
 
-            string [] Stringi = GenerateText().Split(new Char [] {' ', '.', ',', '\t', '\n' });
+            /*string [] Stringi = GenerateText().Split(new Char [] {' ', '.', ',', '\t', '\n' });
             string kleks = null;
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             for (int i = 0; i < 2; i++)
             {
-                for (int j = 0; j< Stringi.Length; j++)
+                for (int j = 0; j< Stringi.Length/2; j++)
                 {
                     if (Stringi[j].Trim() != "")
                     {
-                        Console.WriteLine(Stringi[j]);
+                        
                         kleks += Stringi[j] + " ";
                     }
                 }
-                //Console.WriteLine(kleks);
                 AgentsList.Add(new AgentText(i + 1,kleks));
                 kleks = null;
-            }
-            
-            
-           
-            //AgentsList.Add(new AgentSumSum(AgentsList.Take(AgentsList.Count).ToList()));
+            }*/
 
+            int Kasiora = 0;
 
+            AgentsList.Add(new AgentBankier(Kasiora));
+            AgentsList.Add(new AgentKlient1());
+            AgentsList.Add(new AgentKlient2());
+            
+            //AgentsList.Add(new AgentBankier());
 
 
             return AgentsList;

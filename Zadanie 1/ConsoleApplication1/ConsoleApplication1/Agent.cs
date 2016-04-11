@@ -17,6 +17,7 @@ namespace ConsoleApplication1
         public string Stringi;
         
 
+
         public bool HasFinished {
             get;
             set;
@@ -25,7 +26,7 @@ namespace ConsoleApplication1
 
         public void Run(){
             while (!HasFinished){
-                Thread.Sleep(10);
+                Thread.Sleep(500);
                 this.Update();
             }
 
