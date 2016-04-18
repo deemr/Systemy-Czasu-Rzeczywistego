@@ -14,10 +14,12 @@ namespace ConsoleApplication1
 
         public int kasaBanku;
         public static Mutex mut = new Mutex();
+        public Object thisLock = new Object();
+
 
         public override void Update()
         {
-            if (Licznik < 10)
+            if (Licznik < 120)
             {
                 Console.WriteLine(kasaBanku);
                 Licznik++;

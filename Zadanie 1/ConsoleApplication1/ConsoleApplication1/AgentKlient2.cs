@@ -16,17 +16,21 @@ namespace ConsoleApplication1
 
         public override void Update()
         {
-            if (Licznik < 10)
+            if (Licznik < 100)
             {
-                try
-                {
-                    bank.kasaBanku = bank.kasaBanku +2;
-                    AgentBankier.mut.WaitOne();
-                }
+                //try
+                //{
+                    lock(bank.thisLock)
+                    {
+                        bank.kasaBanku = bank.kasaBanku + 2;
+                    }
+                    //AgentBankier.mut.WaitOne();
+                /*}
                 finally
                 {
+
                     AgentBankier.mut.ReleaseMutex();
-                }
+                }*/
                 Licznik++;
             }
             else

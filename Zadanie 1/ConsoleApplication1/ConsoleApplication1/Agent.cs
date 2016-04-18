@@ -26,7 +26,7 @@ namespace ConsoleApplication1
 
         public void Run(){
             while (!HasFinished){
-                Thread.Sleep(500);
+                Thread.Sleep(100);
                 this.Update();
             }
 

@@ -57,7 +57,8 @@ namespace ConsoleApplication1
             AgentsList.Add(bank);
             AgentsList.Add(new AgentKlient1(bank));
             AgentsList.Add(new AgentKlient2(bank));
-            
+  
+
             //AgentsList.Add(new AgentBankier());
 
 
