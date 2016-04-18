@@ -11,15 +11,21 @@ namespace ConsoleApplication1
     class AgentKlient1 : Agent
     {
 
-
+        AgentBankier bank;
         int StanKonta;
 
         public override void Update()
         {
             if (Licznik < 10)
             {
-                StanKonta = StanKonta + 2;
-                Console.WriteLine(StanKonta);
+                try {
+                    bank.kasaBanku = bank.kasaBanku - 1;
+                    AgentBankier.mut.WaitOne();
+                }
+                finally
+                {
+                    AgentBankier.mut.ReleaseMutex();
+                }
                 Licznik++;
             }
             else
@@ -29,10 +35,10 @@ namespace ConsoleApplication1
         }
 
 
-        public AgentKlient1(int Kasiora)
+        public AgentKlient1(AgentBankier bankier)
         {
 
-            StanKonta = Kasiora;
+            bank = bankier;
 
         }
 

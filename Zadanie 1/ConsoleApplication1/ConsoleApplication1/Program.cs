@@ -53,9 +53,10 @@ namespace ConsoleApplication1
 
             int Kasiora = 0;
 
-            AgentsList.Add(new AgentBankier(Kasiora));
-            AgentsList.Add(new AgentKlient1());
-            AgentsList.Add(new AgentKlient2());
+            var bank = new AgentBankier(Kasiora);
+            AgentsList.Add(bank);
+            AgentsList.Add(new AgentKlient1(bank));
+            AgentsList.Add(new AgentKlient2(bank));
             
             //AgentsList.Add(new AgentBankier());
 

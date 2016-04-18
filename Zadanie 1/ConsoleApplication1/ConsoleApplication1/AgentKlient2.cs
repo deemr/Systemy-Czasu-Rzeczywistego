@@ -11,14 +11,22 @@ namespace ConsoleApplication1
     class AgentKlient2 : Agent
     {
 
+        AgentBankier bank;
         int StanKonta;
 
         public override void Update()
         {
             if (Licznik < 10)
             {
-                StanKonta--;
-                Console.WriteLine(StanKonta);
+                try
+                {
+                    bank.kasaBanku = bank.kasaBanku +2;
+                    AgentBankier.mut.WaitOne();
+                }
+                finally
+                {
+                    AgentBankier.mut.ReleaseMutex();
+                }
                 Licznik++;
             }
             else
@@ -28,10 +36,11 @@ namespace ConsoleApplication1
         }
 
 
-        public AgentKlient2(int Kasiora, Agent bank)
+        public AgentKlient2(AgentBankier bankier)
         {
-            //trzeba wrzucic do kazdego klienta referencje do banku, zeby moc operowac na wspolnym hajsie
-            // bank.Kasiora;
+
+            bank = bankier;
+
         }
 
 
