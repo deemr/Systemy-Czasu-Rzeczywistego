@@ -15,6 +15,7 @@ namespace ConsoleApplication1
         public int kasaBanku;
         public static Mutex mut = new Mutex();
         public Object thisLock = new Object();
+        public SpinLock sl = new SpinLock();
 
 
         public override void Update()

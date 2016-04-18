@@ -16,21 +16,24 @@ namespace ConsoleApplication1
 
         public override void Update()
         {
+            bool gotLock = false;
             if (Licznik < 100)
             {
-                //try
-                //{
-                    lock(bank.thisLock)
-                    {
-                        bank.kasaBanku = bank.kasaBanku + 2;
-                    }
+                gotLock = false;
+                try
+                {
+                    //lock (bank.thisLock)
+                    //{
+                    bank.sl.Enter(ref gotLock);
+                    bank.kasaBanku = bank.kasaBanku +2;
+                    //}
                     //AgentBankier.mut.WaitOne();
-                /*}
+                }
                 finally
                 {
-
-                    AgentBankier.mut.ReleaseMutex();
-                }*/
+                    bank.sl.Exit();
+                    //  AgentBankier.mut.ReleaseMutex();
+                }
                 Licznik++;
             }
             else
