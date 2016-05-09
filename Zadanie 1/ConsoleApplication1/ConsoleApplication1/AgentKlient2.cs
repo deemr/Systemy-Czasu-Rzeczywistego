@@ -12,7 +12,7 @@ namespace ConsoleApplication1
     {
 
         AgentBankier bank;
-        int StanKonta;
+        int StanKonta;  
 
         public override void Update()
         {
