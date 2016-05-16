@@ -135,7 +135,7 @@ namespace RTLabExample1
 
             //Those should all converge, but with different performance/safety/complexity tradeoffs.
             //The excercise of changing/verifying other wait strategies is left to the reader/student.
-            RunBank(() => new DatabaseSyncStrategy<double>(), () => new NoWaitStrategy());
+            RunBank(() => new LockSyncStrategy<double>(), () => new NoWaitStrategy());
             //RunBank(() => new LockSyncStrategy<double>(), () => new NoWaitStrategy());
             //RunBank(() => new SpinlockSyncStrategy<double>(), () => new NoWaitStrategy());
             //Notice how different sleep ratios here will uncover seemingly chaotic, yet correct behavior 

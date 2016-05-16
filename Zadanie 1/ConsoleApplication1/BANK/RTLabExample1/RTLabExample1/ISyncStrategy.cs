@@ -10,9 +10,9 @@ namespace RTLabExample1
     //Observe that in e.g. Haskell such an extension would be almost pointless thanks to partial application, i.e. T, T -> T is equivalent to T -> T -> T,
     //which fits this declaration.
     //The usage of generics below is very close to C++ templates (albeit simpler).
-    public interface ISyncStrategy<double>
+    public interface ISyncStrategy<T>
     {
-        void SetOperationContinuation(Func<double> reader, Action<double> cont);
+        void SetOperationContinuation(Func<T> reader, Action<T> cont);
 
         void Synchronize(int id, Func<T, T> operation);
 

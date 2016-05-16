@@ -9,48 +9,7 @@ using System.Threading.Tasks;
 namespace RTLabExample1
 {
 
-    public class DatabaseSyncStrategy<double> : ISyncStrategy<double>
-    {
-        //We declare an empty continuation to be safe when user breaks the protocol and does not call SetOpContinuation.
-        //One could eliminate the need for this by using constraints on generics and forcing synchronizer construction in the bank, but
-        //this would be too contrived for students.
-        protected Action<double> continuation = (v) => { };
 
-        protected Func<double> reader = () => default(double);
-
-        //This can be empty - so it is not abstract;
-        public virtual void ProcessRequests()
-        {
-        }
-
-        //This is not supposed to be overriden. Ask Your students: What is the difference between overriding members with "new" and "override"?
-        public void SetOperationContinuation(Func<double> reader, Action<double> cont)
-        {
-            this.continuation = cont;
-            this.reader = reader;
-        }
-
-        //This is mandatory.
-        public virtual void Synchronize(int id, Func<T, T> operation)
-        {
-            try
-            {
-                using (var file = new System.IO.StreamWriter(@"C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\BANK\RTLabExample1\WriteLines.txt", true))
-                {
-                    var value = this.reader();
-                    var diff = operation()
-                
-                    file.WriteLine(operation(reader()).ToString());
-                    file.Flush();  
-                }
-              
-            }
-            catch (Exception e)
-            {
-                // your message here.
-            }
-        }
-    }
 
     //Client should not be able to modify the balance directly, because that could bypass synchronization.
     //On the other hand, modification of account balance is fragile and intrinsic to synchronization, so synchronizer/sync strategy 
@@ -65,7 +24,7 @@ namespace RTLabExample1
         //We declare an empty continuation to be safe when user breaks the protocol and does not call SetOpContinuation.
         //One could eliminate the need for this by using constraints on generics and forcing synchronizer construction in the bank, but
         //this would be too contrived for students.
-        protected Action<T> continuation = (v) => {};
+        protected Action<T> continuation = (v) => { };
 
         protected Func<T> reader = () => default(T);
 
@@ -82,6 +41,26 @@ namespace RTLabExample1
         }
 
         //This is mandatory.
+        public void Save(int id, T value)
+        {
+
+            try
+            {
+                using (var file = new System.IO.StreamWriter(@"C:\Users\ksis\Source\Repos\Systemy-Czasu-Rzeczywistego\Zadanie 1\ConsoleApplication1\BANK\RTLabExample1\WriteLines.txt", true))
+                {
+                    file.WriteLine("<!-- START  ");
+                    file.WriteLine(value.ToString());
+                    file.WriteLine("     END    -->");
+                    file.Flush();
+                }
+
+            }
+            catch (Exception e)
+            {
+                // your message here.
+            }
+
+        }
         public abstract void Synchronize(int id, Func<T, T> operation);
     }
 
@@ -112,7 +91,9 @@ namespace RTLabExample1
         {
             lock(obj)
             {
-                continuation(operation(reader()));
+                var value = operation(reader());
+                Save(id, value);
+                continuation(value);
             }
         }
     }
