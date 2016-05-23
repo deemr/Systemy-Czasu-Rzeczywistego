@@ -130,12 +130,26 @@ namespace RTLabExample1
         {
             Console.WriteLine("Program started.");
 
+            var wynik = 1;
+            var i = 1;
+            Action <WorkstealingAgent> silnia = (WorkstealingAgent ag) => { };
+            silnia = (WorkstealingAgent ag) =>
+{
+                wynik *= i;
+                ++i;
+                if (i < 10) ag.Enqueue(silnia);
+                else Console.WriteLine(wynik);
+            };
+
+            var runnables = new List<IRunnable>(1000);
+            runnables.Add(new WorkstealingAgent());
+
             //This obviously will not converge to desired balance. But let the students check for themselves!
             //RunBank(() => new NoSyncStrategy<double>(), () => new NoWaitStrategy());
 
             //Those should all converge, but with different performance/safety/complexity tradeoffs.
             //The excercise of changing/verifying other wait strategies is left to the reader/student.
-            RunBank(() => new LockSyncStrategy<double>(), () => new NoWaitStrategy());
+            //RunBank(() => new LockSyncStrategy<double>(), () => new NoWaitStrategy());
             //RunBank(() => new LockSyncStrategy<double>(), () => new NoWaitStrategy());
             //RunBank(() => new SpinlockSyncStrategy<double>(), () => new NoWaitStrategy());
             //Notice how different sleep ratios here will uncover seemingly chaotic, yet correct behavior 
