@@ -133,17 +133,23 @@ namespace RTLabExample1
             var wynik = 1;
             var i = 1;
             Action <WorkstealingAgent> silnia = (WorkstealingAgent ag) => { };
+            
             silnia = (WorkstealingAgent ag) =>
-{
+            {
                 wynik *= i;
                 ++i;
-                if (i < 10) ag.Enqueue(silnia);
+               
+                if (i < 10) ag.Queue.Enqueue(silnia);
                 else Console.WriteLine(wynik);
             };
 
             var runnables = new List<IRunnable>(1000);
-            runnables.Add(new WorkstealingAgent());
 
+            runnables.Add(new WorkstealingAgent(1, runnables));
+            runnables.Add(new WorkstealingAgent(2, runnables));
+
+            RunThreads(runnables);
+            
             //This obviously will not converge to desired balance. But let the students check for themselves!
             //RunBank(() => new NoSyncStrategy<double>(), () => new NoWaitStrategy());
 
