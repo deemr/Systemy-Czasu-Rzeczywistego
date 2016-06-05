@@ -143,10 +143,13 @@ namespace RTLabExample1
                 else Console.WriteLine(wynik);
             };
 
-            var runnables = new List<IRunnable>(1000);
+            var runnables = new List<IRunnable>();
 
             runnables.Add(new WorkstealingAgent(1, runnables));
             runnables.Add(new WorkstealingAgent(2, runnables));
+            //do agentow WS jest dodawana lista ich samych, zeby kazdy mial wglad w swoich kolegow na liscie, zeby w razie co
+            //mogl zrobic ich robote
+
 
             RunThreads(runnables);
             

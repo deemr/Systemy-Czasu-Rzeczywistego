@@ -9,9 +9,9 @@ namespace RTLabExample1
     class TreeNode
     {
 
-        private int node { get; set; }
-        private TreeNode parent { get; set; }
-        private List<TreeNode> children { get; set; }
+        public int node { get; set; }
+        public TreeNode parent { get; set; }
+        public List<TreeNode> children { get; set; }
 
         public TreeNode(int depth, int branching)
         {
@@ -32,10 +32,7 @@ namespace RTLabExample1
                     children.Add(new TreeNode(depth - 1, random.Next(branching)));
                     children[i].parent = this;
                 }
-            } else
-            {
-
-                Console.Write("jak drzewo ma miec ujemna glebokosc, no jak?");
+            } else Console.Write("jak drzewo ma miec ujemna glebokosc, no jak?");
                 
             }
         }
