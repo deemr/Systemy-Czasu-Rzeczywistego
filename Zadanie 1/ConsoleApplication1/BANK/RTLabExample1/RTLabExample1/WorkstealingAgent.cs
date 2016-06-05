@@ -25,10 +25,10 @@ namespace RTLabExample1
 
 
                 if (Queue.TryDequeue(out result)) result(this);
-                if (Queue.IsEmpty) {
+                if (this.Queue.IsEmpty) { 
                     foreach (WorkstealingAgent agent in agentList) {
-
-                        if(agent.Queue.TryDequeue(out result)) result(this);               
+                        //jezeli ma co sciagnac i nie bedzie probowal sciagnac z siebie samego to ma cos zrobic
+                        if(agent.Queue.TryDequeue(out result) && agent != this) result(this);               
 
                     } 
                 } 

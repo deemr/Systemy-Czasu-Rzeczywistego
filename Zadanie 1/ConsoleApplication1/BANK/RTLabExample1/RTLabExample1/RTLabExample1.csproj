@@ -46,6 +46,7 @@
     <Compile Include="Agent.cs" />
     <Compile Include="BankAgent.cs" />
     <Compile Include="BankClientAgent.cs" />
+    <Compile Include="TreeNode.cs" />
     <Compile Include="WorkstealingAgent.cs" />
     <Compile Include="ConstantCountingAgent.cs" />
     <Compile Include="CountingAgent.cs" />
