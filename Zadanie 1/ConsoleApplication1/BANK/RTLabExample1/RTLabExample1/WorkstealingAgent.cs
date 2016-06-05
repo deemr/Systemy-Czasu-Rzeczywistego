@@ -43,6 +43,10 @@ namespace RTLabExample1
 
             bool isEmptyQueue = true;
        
+            //tutaj nalezaloby zrobic wywolanie metody SumTree, ale tylko raz, zeby nie liczyl w kolko
+            //tego samego, do niej trzeba by zrobic jakis nowy obiekt drzewa z przykaldowa glebokoscia i ilsocia branchy
+
+
             while (isEmptyQueue) {
                 if (Queue.TryDequeue(out result)) result(this);
                 if (this.Queue.IsEmpty) { 
